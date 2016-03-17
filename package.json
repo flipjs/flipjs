@@ -4,7 +4,7 @@
   "description": "flipjs javascript utility library",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/index.test.js -w"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/flipjs/flipjs/issues"
   },
-  "homepage": "https://github.com/flipjs/flipjs"
+  "homepage": "https://github.com/flipjs/flipjs",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.4.5"
+  }
 }
