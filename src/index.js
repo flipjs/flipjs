@@ -2,7 +2,7 @@ module.exports = {
   openLink: openLink,
   isEmpty: isEmpty,
   capitalize: capitalize,
-  iSFound: iSFound
+  isFound: isFound
 }
 
 function openLink (link) {
@@ -25,7 +25,7 @@ function capitalize (string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
-function iSFound (obj, searchString) {
+function isFound (obj, searchString) {
   return Object.keys(obj).some((item) => {
     if (obj[item]) {
       const str = obj[item].toString().toLowerCase()

@@ -25,4 +25,17 @@ describe('flipjs', function () {
       }
     )
   })
+  describe('isFound', function () {
+    var hello = {foo: 'bar', fizz: 'buzz'}
+    it('should return true if string is found inside the object',
+      function () {
+        expect(flipjs.isFound(hello, 'buzz')).to.be.true
+      }
+    )
+    it('should return false if string is not found inside the object',
+      function () {
+        expect(flipjs.isFound(hello, 'world')).to.be.false
+      }
+    )
+  })
 })
