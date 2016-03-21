@@ -7,8 +7,10 @@ describe('flipjs', function () {
       expect(flipjs.isEmpty({})).to.be.true
       expect(flipjs.isEmpty([])).to.be.true
       expect(flipjs.isEmpty('')).to.be.true
+      expect(flipjs.isEmpty(null)).to.be.true
     })
     it('should return false when not empty', function () {
+      expect(flipjs.isEmpty({not: ''})).to.be.false
       expect(flipjs.isEmpty({not: 'empty'})).to.be.false
       expect(flipjs.isEmpty(['not empty'])).to.be.false
       expect(flipjs.isEmpty('not empty')).to.be.false
@@ -26,7 +28,7 @@ describe('flipjs', function () {
     )
   })
   describe('isFound', function () {
-    var hello = {foo: 'bar', fizz: 'buzz'}
+    var hello = {foo: 'bar', fizz: 'buzz', empty: ''}
     it('should return true if string is found inside the object',
       function () {
         expect(flipjs.isFound(hello, 'buzz')).to.be.true
