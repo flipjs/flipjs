@@ -1,8 +1,10 @@
 {
   "name": "flipjs",
+  "version": "0.0.0-semantically-released",
   "description": "flipjs javascript utility library",
   "main": "src/index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "mocha",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -18,7 +20,12 @@
   "homepage": "https://github.com/flipjs/flipjs",
   "devDependencies": {
     "chai": "3.5.0",
+    "commitizen": "2.7.3",
+    "cz-conventional-changelog": "1.1.5",
     "mocha": "2.4.5",
     "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
