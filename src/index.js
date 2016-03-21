@@ -1,12 +1,7 @@
 module.exports = {
-  openLink: openLink,
   isEmpty: isEmpty,
   capitalize: capitalize,
   isFound: isFound
-}
-
-function openLink (link) {
-  window.open(link, '_blank', 'toolbar=0,status=0,width=1024,height=768')
 }
 
 function isEmpty (obj) {
