@@ -6,6 +6,8 @@
   "scripts": {
     "commit": "git-cz",
     "test": "istanbul cover -x *.test.js _mocha -- -R spec ./test/index.test.js",
+    "check-coverage": "istanbul check-coverage --statements 90 --branches 90 --functions 90 --lines 90",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -20,6 +22,7 @@
   "homepage": "https://github.com/flipjs/flipjs",
   "devDependencies": {
     "chai": "3.5.0",
+    "codecov.io": "0.1.6",
     "commitizen": "2.7.3",
     "cz-conventional-changelog": "1.1.5",
     "ghooks": "1.0.3",
@@ -32,7 +35,7 @@
       "path": "node_modules/cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && npm run check-coverage"
     }
   }
 }
