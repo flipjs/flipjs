@@ -21,9 +21,21 @@ describe('flipjs', function () {
       expect(flipjs.capitalize('chris')).to.be.equal('Chris')
     })
     it(
-      'should return an empty string when no params passed to it',
+      'should return undefined when no params passed to it',
       function () {
-        expect(flipjs.capitalize()).to.be.equal('')
+        expect(flipjs.capitalize()).to.be.equal(undefined)
+      }
+    )
+    it(
+      'should return undefined when undefined is passed to it',
+      function () {
+        expect(flipjs.capitalize(undefined)).to.be.equal(undefined)
+      }
+    )
+    it(
+      'should return null when null is passed to it',
+      function () {
+        expect(flipjs.capitalize(null)).to.be.equal(null)
       }
     )
   })
